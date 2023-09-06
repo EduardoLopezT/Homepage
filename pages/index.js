@@ -1,17 +1,20 @@
-import Link from 'next/link';
 import {
   Button,
   Container,
   Box,
   Heading,
   Image,
-  useColorModeValue
+  useColorModeValue,
+  List,
+  ListItem,
+  Link
 } from '@chakra-ui/react';
 import Section from '../components/Section';
 import Paragraph from '../components/Paragraph';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/Bio';
 import Layout from '../components/layouts/article';
+import { IoLogoLinkedin, IoLogoGithub, IoMail } from 'react-icons/io5';
 
 const Page = () => {
   return (
@@ -78,8 +81,8 @@ const Page = () => {
             great together!
           </Paragraph>
           <Box align="center" my={4}>
-            <Link href="/works">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+            <Link href="/projects">
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="purple">
                 My Portfolio
               </Button>
             </Link>
@@ -109,12 +112,55 @@ const Page = () => {
           </BioSection>
         </Section>
         <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            ♥
+          <Heading as="h3" variant="section-title" display="inline-flex">
+            What i like
           </Heading>
           <Paragraph>
             Programming, Music, Videogames, Birds, Anime and Series
           </Paragraph>
+        </Section>
+        <Section delay={0.4}>
+          <Heading as="h3" variant="section-title">
+            Social Media
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/EduardoLopezT" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="purple"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  &lt;EduardoLopezT&frasl;&gt;
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/eduardolopezt/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="purple"
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  EduardoLopezT
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="mailto:name@email.com" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="purple"
+                  leftIcon={<IoMail />}
+                >
+                  eduardo.lopez20732@gmail.com
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
