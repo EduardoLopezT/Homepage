@@ -4,7 +4,6 @@ import {
   Box,
   Heading,
   Image,
-  useColorModeValue,
   List,
   ListItem,
   Link
@@ -14,21 +13,14 @@ import Paragraph from '../components/Paragraph';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/Bio';
 import Layout from '../components/layouts/article';
-import { IoLogoLinkedin, IoLogoGithub, IoMail } from 'react-icons/io5';
+import { IoLogoLinkedin, IoLogoGithub, IoMail, IoBody } from 'react-icons/io5';
+import { FcBusinessContact, FcLike } from 'react-icons/fc';
+import { FaTimeline } from 'react-icons/fa6';
 
 const Page = () => {
   return (
     <Layout>
       <Container maxW="container.md" p={5}>
-        <Box
-          borderRadius="lg"
-          p={3}
-          align="center"
-          mb={6}
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        >
-          Hello, I&apos;m a full-stack developer based in Mexico!
-        </Box>
         <Box display={{ md: 'flex', lg: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
@@ -59,9 +51,12 @@ const Page = () => {
         </Box>
 
         <Section delay={0.1}>
-          <Heading as="h3" variant="section-title">
-            About me
-          </Heading>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <IoBody fontSize={25} />
+            <Heading as="h3" variant="section-title" ml={2}>
+              About me
+            </Heading>
+          </div>
           <Paragraph>
             Hello! I&apos;m a passionate 23 year old developer from Mexico,
             driven by an insatiable thirst for knowledge and a strong commitment
@@ -89,9 +84,12 @@ const Page = () => {
           </Box>
         </Section>
         <Section delay={0.2}>
-          <Heading as="h3" variant="section-title">
-            Bio
-          </Heading>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <FaTimeline fontSize={25} />
+            <Heading as="h3" variant="section-title" ml={2}>
+              Bio
+            </Heading>
+          </div>
           <BioSection>
             <BioYear>2000</BioYear>
             Born in Guanajuato, Mexico.
@@ -112,17 +110,23 @@ const Page = () => {
           </BioSection>
         </Section>
         <Section delay={0.3}>
-          <Heading as="h3" variant="section-title" display="inline-flex">
-            What i like
-          </Heading>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <FcLike fontSize={25} />
+            <Heading as="h3" variant="section-title" ml={2}>
+              What i like
+            </Heading>
+          </div>
           <Paragraph>
-            Programming, Music, Videogames, Birds, Anime and Series
+            Programming, Music, Videogames, Budgies, Anime and Series
           </Paragraph>
         </Section>
         <Section delay={0.4}>
-          <Heading as="h3" variant="section-title">
-            Social Media
-          </Heading>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <FcBusinessContact fontSize={25} />
+            <Heading as="h3" variant="section-title" ml={2}>
+              Social
+            </Heading>
+          </div>
           <List>
             <ListItem>
               <Link href="https://github.com/EduardoLopezT" target="_blank">
@@ -150,7 +154,7 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="mailto:name@email.com" target="_blank">
+              <Link href="mailto:eduardo.lopez20732@gmail.com" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="purple"

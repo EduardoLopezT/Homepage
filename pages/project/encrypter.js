@@ -9,6 +9,7 @@ import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from 'react-icons/io5';
 const SpanStyled = styled.span`
   vertical-align: middle;
   display: inline-flex;
+  gap: 2px;
 `;
 
 const Project = () => {
@@ -16,7 +17,7 @@ const Project = () => {
     <Layout title="Encrypter Js">
       <Container maxW="container.md" p={5}>
         <Title>
-          Encrypter Js <Badge>2016</Badge>
+          Encrypter <Badge>2023</Badge>
         </Title>
         <Paragraph>
           A web application created for the Oracle Next Education course to

@@ -10,10 +10,10 @@ const ThemeToggleButton = () => {
       <motion.div
         style={{ display: 'inline-block' }}
         key={useColorModeValue('light', 'dark')}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        initial={{ x: -20, y: -50, opacity: 0 }}
+        animate={{ x: 0, y: 0, opacity: 1 }}
+        exit={{ x: 20, y: -50, opacity: 0 }}
+        transition={{ duration: 0.25 }}
       >
         <IconButton
           aria-label="Toggle theme"

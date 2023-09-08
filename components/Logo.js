@@ -29,6 +29,7 @@ const Logo = () => {
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontWeight="bold"
           ml={1}
+          fontSize={25}
         >
           Eduardo Lopez
         </Text>
